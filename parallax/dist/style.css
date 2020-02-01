@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.section {
+  width: 1366px;
+  margin: 0 auto;
+}
+.section .wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section .wrapper img {
+  transition: all 0.25s ease-in-out;
+}
+.section .wrapper.active .left {
+  margin-top: 10px;
+  margin-right: 36px;
+  transform: rotate(-20deg);
+}
+.section .wrapper.active .right {
+  margin-top: 10px;
+  margin-left: 36px;
+  transform: rotate(20deg);
+}
+.section.start-content,
+.section.end-content {
+  height: 120vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.open-wing-left {
+  margin-top: 10px;
+  margin-right: 36px;
+  transform: rotate(-20deg);
+}
+.open-wing-right {
+  margin-top: 10px;
+  margin-left: 36px;
+  transform: rotate(20deg);
+}

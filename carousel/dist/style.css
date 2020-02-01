@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+}
+.wrapper {
+  padding: 10px;
+  width: 120%;
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+}
+.wrapper .item {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  -webkit-transition: height 0.2s ease-in-out;
+  transition: height 0.2s ease-in-out;
+  -webkit-transition: width 0.2s ease-in-out;
+  transition: width 0.2s ease-in-out;
+}
+.wrapper .item:hover {
+  width: 50px;
+  height: 50px;
+}
+.wrapper .item:first-child {
+  margin-left: 0;
+}
+.wrapper .item:last-child {
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-name: mltr;
+  animation-iteration-count: infinite;
+}
+.wrapper .item:last-child:hover {
+  cursor: pointer;
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+.wrapper .item1 {
+  background-color: red;
+}
+.wrapper .item2 {
+  background-color: blue;
+}
+.wrapper .item3 {
+  background-color: green;
+}
+.wrapper :not(:last-child):hover {
+  cursor: pointer;
+}
+.wrapper :not(:last-child):hover ~ :last-child {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+.change-color-anim {
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-name: change_color;
+  animation-iteration-count: infinite;
+}
+.move-ltr-anim {
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-name: mltr;
+  animation-iteration-count: infinite;
+}
+.example {
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-name: example;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  /* Standard syntax */
+  animation-name: example;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes change_color {
+  0% {
+    background-color: transparent !important;
+  }
+  100% {
+    background-color: yellow !important;
+  }
+}
+@keyframes change_color {
+  0% {
+    background-color: transparent !important;
+  }
+  100% {
+    background-color: yellow !important;
+  }
+}
+@keyframes mltr {
+  100% {
+    margin-left: 120%;
+  }
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mltr {
+  100% {
+    margin-left: 100%;
+  }
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    background-color: green;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+}
+@keyframes example {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    background-color: green;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+}
